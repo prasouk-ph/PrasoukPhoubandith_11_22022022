@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router-dom'
 import Logo from './Logo/Logo';
 import Menu from './Menu/Menu';
 import './Header.css';
@@ -8,8 +7,6 @@ function Header() {
         <div className='Header'>
             <Logo />
             <Menu />
-            
-            <Outlet />
         </div>
       );
 }

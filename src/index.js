@@ -3,20 +3,16 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css';
 // import App from './App';
-import Header from './Header/Header';
-// import Home from './Home/Home';
+import Layout from './Layout/Layout';
+import Home from './Home/Home';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
         <Router>
             <Routes>
-                <Route path="/" element={<Header/>}>
-                {/* <Route index element={<Home />} /> */}
-                {/* <Route path="/about" element={<About/>}>
-                </Route>
-                <Route path=“*” element={<NoPage/>}> */}
-                {/* </Route> */}
+                <Route path="/" element={<Layout/>}>
+                    <Route index element={<Home />} />
                 </Route>
             </Routes>
         </Router>
@@ -28,3 +24,8 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+                // {/* <Route path="/about" element={<About/>}>
+                // </Route>
+                // <Route path=“*” element={<NoPage/>}> */}
+                // {/* </Route> */}

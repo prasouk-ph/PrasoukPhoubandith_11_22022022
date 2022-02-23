@@ -1,8 +1,8 @@
-import logo from '../../assets/HeaderLogo.svg';
+import logo from '../../assets/FooterLogo.png';
 
 function Logo() {
     return (
-        <div className='Logo'>
+        <div>
             <img src={logo} alt="logo" />
         </div>
       );
