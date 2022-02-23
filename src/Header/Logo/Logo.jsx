@@ -2,7 +2,7 @@ import logo from '../../assets/HeaderLogo.svg';
 
 function Logo() {
     return (
-        <div className='Logo'>
+        <div className='Header-logo'>
             <img src={logo} alt="logo" />
         </div>
       );
