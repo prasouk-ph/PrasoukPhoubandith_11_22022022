@@ -2,19 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css';
-import App from './App';
+// import App from './App';
+import Header from './Header/Header';
+// import Home from './Home/Home';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
         <Router>
             <Routes>
-                <Route path="/" element={<App/>}>
-                </Route>
+                <Route path="/" element={<Header/>}>
+                {/* <Route index element={<Home />} /> */}
                 {/* <Route path="/about" element={<About/>}>
                 </Route>
                 <Route path=“*” element={<NoPage/>}> */}
                 {/* </Route> */}
+                </Route>
             </Routes>
         </Router>
     </React.StrictMode>,
