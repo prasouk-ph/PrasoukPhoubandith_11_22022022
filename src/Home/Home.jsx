@@ -1,4 +1,5 @@
 import './Home.css';
+import Card from './Card/Card';
 
 function Home() {
     return (
@@ -8,7 +9,13 @@ function Home() {
         </section>
         
         <section className='card-container'>
-                
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
         </section>
     </main>
   );
