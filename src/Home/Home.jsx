@@ -1,23 +1,16 @@
-
-import '../App.css';
+import './Home.css';
 
 function Home() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    return (
+    <main>
+        <section className="hero">
+            <p className='hero-text'>Chez vous, partout et ailleurs</p>
+        </section>
+        
+        <section className='card-container'>
+                
+        </section>
+    </main>
   );
 }
 

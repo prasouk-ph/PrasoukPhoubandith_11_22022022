@@ -1,0 +1,18 @@
+.hero {
+    margin: 0 100px;
+    height: 223px;
+    background: rgba(0, 0, 0, 0.3) url("../assets/homeHero.png");
+    background-size: cover;
+    background-blend-mode: darken;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    color: white;
+    position: absolute;
+    font-size: 48px;
+}
