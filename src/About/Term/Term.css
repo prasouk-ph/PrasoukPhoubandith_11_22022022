@@ -16,16 +16,30 @@
 .term-title {
     background: #ff6060;
     height: 47px;
+    width: 100%;
     color: white;
-
     font-weight: normal;
     align-items: center;
     margin: 0;
     padding: 0 18px;
 }
 
-.dropdown-content p {
+.accordion-content p {
     color: #ff6060;
     margin: 0;
     padding: 20px 18px 10px 28px;
+}
+
+.term-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.chevron-up,
+.chevron-down {
+    position: absolute;
+    align-items: center;
+    right: 16px;
 }

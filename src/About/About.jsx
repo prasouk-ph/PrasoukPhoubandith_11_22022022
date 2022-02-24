@@ -4,7 +4,7 @@ import Term from './Term/Term';
 function About() {
     return (
     <main className='about'>
-        <section className="hero">
+        <section className="about-hero">
         </section>
         
         <section className='term-container'>

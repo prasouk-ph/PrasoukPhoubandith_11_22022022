@@ -4,7 +4,7 @@ import Card from './Card/Card';
 function Home() {
     return (
     <main>
-        <section className="hero">
+        <section className="home-hero">
             <p className='hero-text'>Chez vous, partout et ailleurs</p>
         </section>
         
