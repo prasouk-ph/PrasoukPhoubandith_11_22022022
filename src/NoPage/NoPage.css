@@ -1,31 +1,23 @@
-.hero,
-.card-container {
-    margin: 0 100px;
-    border-radius: 25px;
-    margin-bottom: 43px;
-}
-
-.hero {
-    height: 223px;
-    background: rgba(0, 0, 0, 0.3) url("../assets/homeHero.png");
-    background-size: cover;
-    background-blend-mode: darken;
-    position: relative;
+.NoPage {
+    color: #ff6060;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 160px 100px;
 }
 
-.hero-text {
-    color: white;
-    position: absolute;
-    font-size: 48px;
+.NoPage p:nth-child(1) {
+    font-size: 288px;
+    margin: 0 0 66px 0;
+    font-weight: bold;
 }
 
-.card-container {
-    background: #f6f6f6;
-    padding: 56px 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px 60px;
+.NoPage p:nth-child(2) {
+    font-size: 36px;
+    margin: 0 0 182px 0;
+}
+
+.link {
+    font-size: 18px;
+    color: #ff6060;
 }

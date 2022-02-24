@@ -1,23 +1,22 @@
-.NoPage {
-    color: #ff6060;
+.about {
+    margin-bottom: 200px;
+}
+
+.hero {
+    margin: 0 100px 31px 100px;
+    border-radius: 25px;
+    height: 223px;
+    background: rgba(0, 0, 0, 0.3) url("../assets/aboutHero.png");
+    background-size: cover;
+    background-blend-mode: darken;
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.term-container {
+    margin: 0 210px;
+    display: flex;
     flex-direction: column;
-    margin: 160px 100px;
-}
-
-.NoPage p:nth-child(1) {
-    font-size: 288px;
-    margin: 0 0 66px 0;
-    font-weight: bold;
-}
-
-.NoPage p:nth-child(2) {
-    font-size: 36px;
-    margin: 0 0 182px 0;
-}
-
-.link {
-    font-size: 18px;
-    color: #ff6060;
 }

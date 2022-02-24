@@ -1,14 +1,17 @@
 import './About.css';
-import Card from '../Home/Card/Card';
+import Term from './Term/Term';
 
 function About() {
     return (
-    <main>
+    <main className='about'>
         <section className="hero">
         </section>
         
-        <section className='card-container'>
-                <Card />
+        <section className='term-container'>
+                <Term />
+                <Term />
+                <Term />
+                <Term />
         </section>
     </main>
   );
