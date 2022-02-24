@@ -5,6 +5,8 @@ import './index.css';
 // import App from './App';
 import Layout from './Layout/Layout';
 import Home from './Home/Home';
+import About from './About/About';
+import NoPage from './NoPage/NoPage';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -13,6 +15,8 @@ ReactDOM.render(
             <Routes>
                 <Route path="/" element={<Layout/>}>
                     <Route index element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<NoPage/>}/>
                 </Route>
             </Routes>
         </Router>
@@ -24,8 +28,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-                // {/* <Route path="/about" element={<About/>}>
-                // </Route>
-                // <Route path=“*” element={<NoPage/>}> */}
-                // {/* </Route> */}

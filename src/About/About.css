@@ -1,0 +1,23 @@
+.NoPage {
+    color: #ff6060;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 160px 100px;
+}
+
+.NoPage p:nth-child(1) {
+    font-size: 288px;
+    margin: 0 0 66px 0;
+    font-weight: bold;
+}
+
+.NoPage p:nth-child(2) {
+    font-size: 36px;
+    margin: 0 0 182px 0;
+}
+
+.link {
+    font-size: 18px;
+    color: #ff6060;
+}

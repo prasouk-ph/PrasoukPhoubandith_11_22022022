@@ -1,0 +1,31 @@
+.hero,
+.card-container {
+    margin: 0 100px;
+    border-radius: 25px;
+    margin-bottom: 43px;
+}
+
+.hero {
+    height: 223px;
+    background: rgba(0, 0, 0, 0.3) url("../assets/homeHero.png");
+    background-size: cover;
+    background-blend-mode: darken;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    color: white;
+    position: absolute;
+    font-size: 48px;
+}
+
+.card-container {
+    background: #f6f6f6;
+    padding: 56px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px 60px;
+}
