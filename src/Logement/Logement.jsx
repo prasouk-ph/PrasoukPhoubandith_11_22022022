@@ -48,7 +48,7 @@ function Logement() {
         
         <section className='logement-details'>
             <Accordion accordionTitle='Description' accordionContent={ descriptionContent } accordionType='information'/>
-            <Accordion accordionTitle='Équipements' accordionContent={ equipmentContent } accordionType='information'/>
+            <Accordion accordionTitle='Équipements' accordionContent={equipmentContent} accordionType='information' />
         </section>
     </main>
   );
