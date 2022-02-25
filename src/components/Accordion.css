@@ -1,19 +1,18 @@
-.term,
-.term-title {
+.accordion,
+.accordion-title {
     border-radius: 5px;
     display: flex;
     font-size: 24px;
 }
 
-.term {
+.accordion {
     flex-direction: column;
     justify-content: center;
     background: #f6f6f6;
-    width: 1023px;
     margin-bottom: 31px;
 }
 
-.term-title {
+.accordion-title {
     background: #ff6060;
     height: 47px;
     width: 100%;
@@ -30,7 +29,7 @@
     padding: 20px 18px 10px 28px;
 }
 
-.term-header {
+.accordion-header {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -42,4 +41,25 @@
     position: absolute;
     align-items: center;
     right: 16px;
+}
+
+.accordion-content {
+    animation: accordion-open 0.3s;
+}
+
+.information {
+    width: 582px;
+}
+
+.term {
+    width: 1023px;
+}
+
+@keyframes accordion-open {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }

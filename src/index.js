@@ -5,6 +5,7 @@ import './index.css';
 import Layout from './Layout/Layout';
 import Home from './Home/Home';
 import About from './About/About';
+import Logement from './Logement/Logement';
 import NoPage from './NoPage/NoPage';
 import reportWebVitals from './reportWebVitals';
 
@@ -15,6 +16,7 @@ ReactDOM.render(
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/logement" element={<Logement />} />
                     <Route path="*" element={<NoPage />}/>
                 </Route>
             </Routes>
