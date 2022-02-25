@@ -1,31 +1,60 @@
-.home-hero,
-.card-container {
+.logement-main {
     margin: 0 100px;
-    border-radius: 25px;
-    margin-bottom: 43px;
 }
 
-.home-hero {
-    height: 223px;
-    background: rgba(0, 0, 0, 0.3) url("../assets/homeHero.png");
-    background-size: cover;
-    background-blend-mode: darken;
-    position: relative;
+.logement-header,
+.logement-carrousel {
+    margin-bottom: 30px;
+}
+
+.logement-carrousel-image {
+    height: 415px;
+    width: 1240px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.logement-info-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logement-title {
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+}
+
+.logement-host {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.hero-text {
-    color: white;
-    position: absolute;
-    font-size: 48px;
+.logement-host-name {
+    width: 93px;
+    margin: 0 10px 0 0;
 }
 
-.card-container {
-    background: #f6f6f6;
-    padding: 56px 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px 60px;
+.logement-second-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logement-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.star {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
+
+.tag-container {
+    display: flex;
 }

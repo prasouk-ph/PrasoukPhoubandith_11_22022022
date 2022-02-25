@@ -17,16 +17,16 @@
     height: 47px;
     width: 100%;
     color: white;
-    font-weight: normal;
+    font-weight: 500;
     align-items: center;
     margin: 0;
     padding: 0 18px;
 }
 
 .accordion-content p {
-    color: #ff6060;
     margin: 0;
     padding: 20px 18px 10px 28px;
+    font-weight: 400;
 }
 
 .accordion-header {
