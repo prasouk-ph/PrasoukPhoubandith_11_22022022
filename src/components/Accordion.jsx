@@ -17,7 +17,13 @@ function Accordion({ accordionTitle, accordionContent, accordionType }) {
         
         {isActive &&
             <div className='accordion-content'>
-                <p>{accordionContent}</p>
+                {accordionTitle === 'Équipements' ?
+                <ul className='content-list'>
+                    {accordionContent.map((equipment, index) => <li key={`${equipment}-${index}`}>{equipment}</li>)}
+                </ul>
+                : <p>{accordionContent}</p>
+                }
+                
             </div>
         }
     </div>

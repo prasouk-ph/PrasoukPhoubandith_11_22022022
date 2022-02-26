@@ -14,13 +14,13 @@ function Logement() {
     const redStarCount = currentAccomodation.rating
     const redStars = []
     for (let count = 0; count < redStarCount; count++) {
-        redStars.push(<img className='star' src={bigRedStar} alt="red star icon" />)
+        redStars.push(<img key={count} className='star' src={bigRedStar} alt="red star icon" />)
     }
 
     const greyStarCount = 5 - redStarCount
     const greyStars = []
     for (let count = 0; count < greyStarCount; count++) {
-        redStars.push(<img className='star' src={bigGreyStar} alt="grey star icon" />)
+        redStars.push(<img key={count} className='star' src={bigGreyStar} alt="grey star icon" />)
     }
 
     // const id = useSearchParams();
@@ -49,7 +49,7 @@ function Logement() {
             <div className="logement-second-info-container">
                 <div className="tag-container">
                     {currentAccomodation.tags.map(tag => (
-                        <Tag name={tag} />
+                        <Tag key={tag} name={tag} />
                     ))}
                 </div>
 

@@ -47,6 +47,11 @@
     animation: accordion-open 0.3s;
 }
 
+.content-list {
+    list-style: none;
+    font-weight: normal;
+}
+
 .information {
     width: 582px;
 }
