@@ -4,10 +4,16 @@ import Tag from './Tag/Tag';
 import bigRedStar from '../assets/bigRedStar.png';
 import bigGreyStar from '../assets/bigGreyStar.png';
 import hostPortrait from '../assets/hostPortrait.png'
+import React, { useState, useEffect } from 'react';
+import accomodations from '../data/logements.json'
 
 function Logement() {
     const descriptionContent = "Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied)."
     const equipmentContent = "Climatisation"
+
+    const [accomodationData] = useState({accomodations})
+
+    useEffect(() => {console.log(accomodationData)})
 
     return (
     <main className='logement-main'>
@@ -39,8 +45,8 @@ function Logement() {
                     <img className='star' src={bigRedStar} alt="red star icon" />
                     <img className='star' src={bigRedStar} alt="red star icon" />
                     <img className='star' src={bigRedStar} alt="red star icon" />
-                    <img className='star' src={bigGreyStar} alt="red star icon" />
-                    <img className='star' src={bigGreyStar} alt="red star icon" />
+                    <img className='star' src={bigGreyStar} alt="grey star icon" />
+                    <img className='star' src={bigGreyStar} alt="grey star icon" />
                 </div>
             </div>
             
@@ -48,7 +54,7 @@ function Logement() {
         
         <section className='logement-details'>
             <Accordion accordionTitle='Description' accordionContent={ descriptionContent } accordionType='information'/>
-            <Accordion accordionTitle='Équipements' accordionContent={equipmentContent} accordionType='information' />
+            <Accordion accordionTitle='Équipements' accordionContent={ equipmentContent } accordionType='information' />
         </section>
     </main>
   );

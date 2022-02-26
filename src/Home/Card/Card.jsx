@@ -1,9 +1,9 @@
 import './Card.css';
 
-function Card() {
+function Card({title}) {
     return (
     <div className='card'>
-        <p className='card-title'>Titre de la location</p>
+        <p className='card-title'>{ title }</p>
     </div>
   );
 }

@@ -1,7 +1,10 @@
 import './Home.css';
 import Card from './Card/Card';
+import accomodations from '../data/logements.json'
 
 function Home() {
+    const accomodationsData = accomodations
+
     return (
     <main>
         <section className="home-hero">
@@ -9,13 +12,9 @@ function Home() {
         </section>
         
         <section className='card-container'>
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                {accomodationsData.map(accomodation => (
+                    <Card title={ accomodation.title } key={ accomodation.id } />
+                ))}
         </section>
     </main>
   );
