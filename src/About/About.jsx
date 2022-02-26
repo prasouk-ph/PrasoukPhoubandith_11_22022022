@@ -13,10 +13,10 @@ function About() {
         </section>
         
         <section className='term-container'>
-                <Accordion accordionTitle='Fiabilité' accordionContent={ fiabilityContent } accordionType='term' />
-                <Accordion accordionTitle='Respect' accordionContent={ respectContent } accordionType='term' />
-                <Accordion accordionTitle='Service' accordionContent={ serviceContent } accordionType='term' />
-                <Accordion accordionTitle='Fiabilité' accordionContent={ resposabilityContent } accordionType='term'/>
+                <Accordion accordionTitle='Fiabilité' accordionContent={fiabilityContent} accordionType='term' />
+                <Accordion accordionTitle='Respect' accordionContent={respectContent} accordionType='term' />
+                <Accordion accordionTitle='Service' accordionContent={serviceContent} accordionType='term' />
+                <Accordion accordionTitle='Fiabilité' accordionContent={resposabilityContent} accordionType='term'/>
         </section>
     </main>
   );

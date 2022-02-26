@@ -7,7 +7,7 @@ function Card({ title, id }) {
 
     return (
     <div className='card' onClick={ handleClick }>
-        <p className='card-title'>{ title }</p>
+        <p className='card-title'>{title}</p>
     </div>
   );
 }

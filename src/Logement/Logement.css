@@ -35,6 +35,13 @@
 .logement-host-name {
     width: 93px;
     margin: 0 10px 0 0;
+    text-align: right;
+}
+
+.logement-host-portrait {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
 }
 
 .logement-second-info-container {

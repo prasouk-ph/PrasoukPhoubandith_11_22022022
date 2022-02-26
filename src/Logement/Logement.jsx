@@ -3,58 +3,66 @@ import Accordion from '../components/Accordion';
 import Tag from './Tag/Tag';
 import bigRedStar from '../assets/bigRedStar.png';
 import bigGreyStar from '../assets/bigGreyStar.png';
-import hostPortrait from '../assets/hostPortrait.png'
 import React, { useState, useEffect } from 'react';
 import accomodations from '../data/logements.json'
+// import { useSearchParams } from "react-router-dom";
 
 function Logement() {
-    const descriptionContent = "Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied)."
-    const equipmentContent = "Climatisation"
+    const [accomodationsData] = useState({ accomodations })
+    const currentAccomodation = accomodationsData.accomodations[0]
 
-    const [accomodationData] = useState({ accomodations })
+    const redStarCount = currentAccomodation.rating
+    const redStars = []
+    for (let count = 0; count < redStarCount; count++) {
+        redStars.push(<img className='star' src={bigRedStar} alt="red star icon" />)
+    }
 
-    useEffect(() => {console.log(accomodationData)})
+    const greyStarCount = 5 - redStarCount
+    const greyStars = []
+    for (let count = 0; count < greyStarCount; count++) {
+        redStars.push(<img className='star' src={bigGreyStar} alt="grey star icon" />)
+    }
+
+    // const id = useSearchParams();
+
+    useEffect(() => {console.log(accomodationsData, currentAccomodation)})
 
     return (
-    <main className='logement-main'>
+    <main className="logement-main">
         <section className="logement-header">
-            <div className='logement-carrousel'>
-                <img className='logement-carrousel-image' src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-1-3.jpg" alt="Magnifique appartement proche Canal Saint Martin" />
+            <div className="logement-carrousel">
+                <img className='logement-carrousel-image' src={currentAccomodation.cover} alt="Magnifique appartement proche Canal Saint Martin" />
             </div>
             
             <div className="logement-info-container">
                 <div className="logement-info">
-                    <h1 className='logement-title'>Magnifique appartement proche Canal Saint Martin</h1>
-                    <p className='logement-location'>Paris, Île-de-France</p>
+                        <h1 className='logement-title'>{currentAccomodation.title}</h1>
+                    <p className='logement-location'>{ currentAccomodation.location }</p>
                 </div>
                 
                 <div className="logement-host">
-                    <p className='logement-host-name'>Alexandre Dumas</p>
-                    <img className='logement-host-portrait' src={ hostPortrait } alt="portrait" />
+                    <p className='logement-host-name'>{currentAccomodation.host.name}</p>
+                    <img className='logement-host-portrait' src={ currentAccomodation.host.picture } alt="portrait" />
                 </div>
             </div>
             
             <div className="logement-second-info-container">
                 <div className="tag-container">
-                    <Tag name='Cozy'/>
-                    <Tag name='Canal'/>
-                    <Tag name='Paris 10'/>
+                    {currentAccomodation.tags.map(tag => (
+                        <Tag name={tag} />
+                    ))}
                 </div>
 
                 <div className="logement-rating">
-                    <img className='star' src={bigRedStar} alt="red star icon" />
-                    <img className='star' src={bigRedStar} alt="red star icon" />
-                    <img className='star' src={bigRedStar} alt="red star icon" />
-                    <img className='star' src={bigGreyStar} alt="grey star icon" />
-                    <img className='star' src={bigGreyStar} alt="grey star icon" />
+                    {redStars}
+                    {greyStars}
                 </div>
             </div>
-            
         </section>
         
-        <section className='logement-details'>
-            <Accordion accordionTitle='Description' accordionContent={ descriptionContent } accordionType='information'/>
-            <Accordion accordionTitle='Équipements' accordionContent={ equipmentContent } accordionType='information' />
+        <section className="logement-details">
+            <Accordion accordionTitle='Description' accordionContent={currentAccomodation.description} accordionType='information'/>
+            <Accordion accordionTitle='Équipements' accordionContent={currentAccomodation.equipments} accordionType='information' />
         </section>
     </main>
   );

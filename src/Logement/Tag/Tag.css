@@ -3,11 +3,12 @@
     justify-content: center;
     align-items: center;
     height: 25px;
-    width: 115px;
+    /* min-width: 115px; */
     border-radius: 10px;
     background: #ff6060;
     color: white;
     margin: 5px;
+    padding: 0 10px;
 }
 
 .tag-title {
