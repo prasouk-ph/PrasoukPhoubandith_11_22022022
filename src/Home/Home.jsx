@@ -13,7 +13,7 @@ function Home() {
         
         <section className='card-container'>
                 {accomodationsData.map(accomodation => (
-                    <Card title={ accomodation.title } key={ accomodation.id } />
+                    <Card title={ accomodation.title } key={ accomodation.id } id={ accomodation.id } />
                 ))}
         </section>
     </main>

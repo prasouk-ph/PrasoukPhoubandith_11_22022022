@@ -1,8 +1,12 @@
 import './Card.css';
 
-function Card({title}) {
+function Card({ title, id }) {
+    function handleClick() {
+        window.location.href = `/Logement:${id}`
+    }
+
     return (
-    <div className='card'>
+    <div className='card' onClick={ handleClick }>
         <p className='card-title'>{ title }</p>
     </div>
   );
