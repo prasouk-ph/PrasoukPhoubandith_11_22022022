@@ -3,14 +3,15 @@ import Accordion from '../components/Accordion';
 import Tag from './Tag/Tag';
 import bigRedStar from '../assets/bigRedStar.png';
 import bigGreyStar from '../assets/bigGreyStar.png';
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import accomodations from '../data/logements.json'
-// import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Logement() {
-    const [accomodationsData] = useState({ accomodations })
-    const currentAccomodation = accomodationsData.accomodations[0]
-
+    const { id } = useParams(); // current page ID
+    const currentAccomodation = accomodations.filter(accomodation => accomodation.id === id)[0]
+    // const [accomodationsData, ] = useState({ currentAccomodation })
+    
     const redStarCount = currentAccomodation.rating
     const redStars = []
     for (let count = 0; count < redStarCount; count++) {
@@ -20,12 +21,10 @@ function Logement() {
     const greyStarCount = 5 - redStarCount
     const greyStars = []
     for (let count = 0; count < greyStarCount; count++) {
-        redStars.push(<img key={count} className='star' src={bigGreyStar} alt="grey star icon" />)
+        greyStars.push(<img key={count} className='star' src={bigGreyStar} alt="grey star icon" />)
     }
 
-    // const id = useSearchParams();
-
-    useEffect(() => {console.log(accomodationsData, currentAccomodation)})
+    // useEffect(() => { console.log(accomodationsData)})
 
     return (
     <main className="logement-main">

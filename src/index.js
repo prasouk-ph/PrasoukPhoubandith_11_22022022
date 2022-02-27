@@ -16,7 +16,7 @@ ReactDOM.render(
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/logement:id" element={<Logement />} />
+                    <Route path="/logement/:id" element={<Logement />} />
                     <Route path="*" element={<NoPage />}/>
                 </Route>
             </Routes>

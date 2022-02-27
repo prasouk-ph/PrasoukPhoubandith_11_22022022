@@ -2,7 +2,7 @@ import './Card.css';
 
 function Card({ title, id }) {
     function handleClick() {
-        window.location.href = `/Logement:${id}`
+        window.location.href = `/Logement/${id}`
     }
 
     return (
