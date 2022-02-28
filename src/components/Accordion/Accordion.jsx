@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import './Accordion.css';
-import chevronUp from '../assets/chevronUp.png';
-import chevronDown from '../assets/chevronDown.png';
+import chevronUp from '../../assets/chevronUp.png';
+import chevronDown from '../../assets/chevronDown.png';
 
 
 function Accordion({ accordionTitle, accordionContent, accordionType }) {
@@ -23,7 +23,6 @@ function Accordion({ accordionTitle, accordionContent, accordionType }) {
                 </ul>
                 : <p>{accordionContent}</p>
                 }
-                
             </div>
         }
     </div>

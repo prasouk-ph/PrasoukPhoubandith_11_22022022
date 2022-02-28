@@ -1,5 +1,5 @@
 import './About.css';
-import Accordion from '../components/Accordion';
+import Accordion from '../components/Accordion/Accordion';
 
 function About() {
     const fiabilityContent = "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
