@@ -30,6 +30,10 @@
     gap: 50px 60px;
 }
 
+.card {
+    animation: grown 0.3s;
+}
+
 @media screen and (max-width: 480px) {
     .home-hero,
     .card-container {
@@ -49,5 +53,14 @@
         padding: 20px;
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+}
+
+@keyframes grown {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
     }
 }
