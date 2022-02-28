@@ -67,15 +67,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    .home-hero,
-    .card-container {
-        margin-bottom: 20px;
-    }
-
-    .home-hero {
-        height: 111px;
-    }
-
     .hero-text {
         font-size: 6.4vw;
         padding: 15px 100px 15px 15px;

@@ -12,7 +12,7 @@ function Accordion({ accordionTitle, accordionContent, accordionType }) {
     <div className={`accordion ${accordionType}`}>
         <div className='accordion-header' onClick={() => setIsActive(!isActive)}>
             <h2 className='accordion-title'>{accordionTitle}</h2>
-            {isActive ? <img className='chevron-up' src={chevronUp} alt="chevron up"/> : <img className='chevron-down' src={chevronDown} alt="chevron down"/>}
+            {isActive ? <img className='chevron-icon chevron-up' src={chevronUp} alt="chevron up"/> : <img className='chevron-icon chevron-down' src={chevronDown} alt="chevron down"/>}
         </div>
         
         {isActive &&
