@@ -2,7 +2,7 @@
 .accordion-title {
     border-radius: 5px;
     display: flex;
-    /* font-size: 24px; */
+    font-size: 24px;
 }
 
 .accordion {
@@ -22,12 +22,14 @@
     align-items: center;
     margin: 0;
     padding: 0 18px;
+    font-size: 24px;
 }
 
 .accordion-content p {
-    margin: 0;
+    margin: 12px;
     padding: 20px 18px 10px 28px;
     font-weight: 400;
+    font-size: 18px;
 }
 
 .accordion-header {
@@ -51,18 +53,38 @@
 .content-list {
     list-style: none;
     font-weight: normal;
+    font-size: 18px;
 }
 
 .information {
-    width: 582px;
-}
-
-.information p {
-    margin: 12px;
+    width: 40.417vw;
 }
 
 .term {
     width: 100%;
+}
+
+@media screen and (max-width: 1145px) {
+    .information {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .accordion-title {
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .accordion-content p,
+    .content-list {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .content-list {
+        margin: 12px;
+    }
 }
 
 @keyframes accordion-open {

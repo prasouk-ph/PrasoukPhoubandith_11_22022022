@@ -15,3 +15,13 @@
     font-size: 14px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 480px) {
+    .tag {
+        height: 18px;
+    }
+
+    .tag-title {
+        font-size: 10px;
+    }
+}

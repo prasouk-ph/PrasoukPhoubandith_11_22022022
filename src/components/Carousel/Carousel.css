@@ -24,3 +24,21 @@
     position: absolute;
     right: 23px;
 }
+
+@media screen and (max-width: 480px) {
+    .logement-carousel-image {
+        height: 255px;
+    }
+
+    .carousel-controls {
+        width: 5.333vw;
+    }
+
+    .previous-button {
+        left: 6px;
+    }
+
+    .next-button {
+        right: 6px;
+    }
+}

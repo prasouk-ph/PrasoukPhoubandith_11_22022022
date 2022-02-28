@@ -36,27 +36,29 @@ function Logement() {
             </div>
             
             <div className="logement-info-container">
-                <div className="logement-info">
-                        <h1 className='logement-title'>{currentAccomodation.title}</h1>
-                    <p className='logement-location'>{currentAccomodation.location}</p>
+                <div className="logement-details-container">
+                    <div className="logement-info">
+                            <h1 className='logement-title'>{currentAccomodation.title}</h1>
+                        <p className='logement-location'>{currentAccomodation.location}</p>
+                    </div>
+                    
+                    <div className="tag-container">
+                        {currentAccomodation.tags.map(tag => (
+                            <Tag key={tag} name={tag} />
+                        ))}
+                    </div>
                 </div>
                 
-                <div className="logement-host">
-                    <p className='logement-host-name'>{currentAccomodation.host.name}</p>
-                    <img className='logement-host-portrait' src={currentAccomodation.host.picture} alt="portrait" />
-                </div>
-            </div>
-            
-            <div className="logement-second-info-container">
-                <div className="tag-container">
-                    {currentAccomodation.tags.map(tag => (
-                        <Tag key={tag} name={tag} />
-                    ))}
-                </div>
+                <div className="logement-host-info-container">
+                    <div className="logement-host">
+                        <p className='logement-host-name'>{currentAccomodation.host.name}</p>
+                        <img className='logement-host-portrait' src={currentAccomodation.host.picture} alt="portrait" />
+                    </div>
 
-                <div className="logement-rating">
-                    {redStars}
-                    {greyStars}
+                    <div className="logement-rating">
+                        {redStars}
+                        {greyStars}
+                    </div>
                 </div>
             </div>
         </section>

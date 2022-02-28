@@ -21,11 +21,6 @@
     flex-direction: column;
 }
 
-.accordion,
-.accordion-title {
-    font-size: 24px;
-}
-
 .accordion:nth-child(1) {
     animation: appear 1s both;
 }
@@ -68,14 +63,6 @@
 }
 
 @media screen and (max-width: 480px) {
-    .accordion-title {
-        font-size: 13px;
-    }
-
-    .accordion {
-        font-size: 12px;
-    }
-
     .chevron-icon {
         width: 15.195879936218262px;
     }
