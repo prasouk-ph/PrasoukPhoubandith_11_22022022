@@ -1,6 +1,26 @@
+.logement-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 .logement-carousel-image {
     height: 415px;
     width: 100%;
     border-radius: 25px;
     object-fit: cover;
+}
+
+.carousel-controls {
+    cursor: pointer;
+}
+
+.previous-button {
+    position: absolute;
+    left: 23px;
+}
+
+.next-button {
+    position: absolute;
+    right: 23px;
 }

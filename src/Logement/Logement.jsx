@@ -3,19 +3,17 @@ import Accordion from '../components/Accordion/Accordion';
 import Tag from './Tag/Tag';
 import bigRedStar from '../assets/bigRedStar.png';
 import bigGreyStar from '../assets/bigGreyStar.png';
-// import React, { useState, useEffect } from 'react';
 import accomodations from '../data/logements.json'
 import Carousel from '../components/Carousel/Carousel'
 import { useParams } from "react-router-dom";
-import NoPage from '../NoPage/NoPage';
+import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 function Logement() {
     const { id } = useParams(); // current page ID
     const currentAccomodation = accomodations.filter(accomodation => accomodation.id === id)[0]
-    // const [accomodationsData, ] = useState({ currentAccomodation })
     if (currentAccomodation === undefined) {
         console.log("ID inexistant !");
-        return <NoPage />
+        return <NotFoundPage />
     }
     
     const redStarCount = currentAccomodation.rating
@@ -30,15 +28,11 @@ function Logement() {
         greyStars.push(<img key={count} className='star' src={bigGreyStar} alt="grey star icon" />)
     }
 
-    
-    // useEffect(() => { console.log(accomodationsData)})
-
     return (
     <main className="logement-main">
         <section className="logement-header">
             <div className="logement-carrousel">
-                {/* <img className='logement-carrousel-image' src={currentAccomodation.cover} alt="Magnifique appartement proche Canal Saint Martin" /> */}
-                    <Carousel pictures={currentAccomodation.pictures}/>
+                    <Carousel pictures={currentAccomodation.pictures} />
             </div>
             
             <div className="logement-info-container">
@@ -68,7 +62,7 @@ function Logement() {
         </section>
         
         <section className="logement-details">
-            <Accordion accordionTitle='Description' accordionContent={currentAccomodation.description} accordionType='information'/>
+            <Accordion accordionTitle='Description' accordionContent={currentAccomodation.description} accordionType='information' />
             <Accordion accordionTitle='Équipements' accordionContent={currentAccomodation.equipments} accordionType='information' />
         </section>
     </main>
