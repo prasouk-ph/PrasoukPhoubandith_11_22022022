@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css';
-import Layout from './Layout/Layout';
-import Home from './Home/Home';
-import About from './About/About';
-import Logement from './Logement/Logement';
-import NotFoundPage from './NotFoundPage/NotFoundPage';
+import Layout from './components/Layout/Layout';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Logement from './pages/Logement/Logement';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

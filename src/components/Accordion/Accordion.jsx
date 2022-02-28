@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import './Accordion.css';
-import chevronUp from '../../assets/chevronUp.png';
-import chevronDown from '../../assets/chevronDown.png';
+import chevronUp from '../../assets/chevron-up.png';
+import chevronDown from '../../assets/chevron-down.png';
 
 
 function Accordion({ accordionTitle, accordionContent, accordionType }) {
@@ -17,7 +17,7 @@ function Accordion({ accordionTitle, accordionContent, accordionType }) {
         
         {isActive &&
             <div className='accordion-content'>
-                {accordionTitle === 'Équipements' ?
+                {typeof accordionContent === 'object' ?
                 <ul className='content-list'>
                     {accordionContent.map((equipment, index) => <li key={`${equipment}-${index}`}>{equipment}</li>)}
                 </ul>

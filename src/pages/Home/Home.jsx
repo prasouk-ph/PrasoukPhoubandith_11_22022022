@@ -1,6 +1,6 @@
 import './Home.css';
 import Card from './Card/Card';
-import accomodations from '../data/logements.json'
+import accomodations from '../../data/logements.json'
 
 function Home() {
     const accomodationsData = accomodations

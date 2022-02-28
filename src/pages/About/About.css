@@ -6,7 +6,7 @@
     margin: 0 100px 31px 100px;
     border-radius: 25px;
     height: 223px;
-    background: rgba(0, 0, 0, 0.3) url("../assets/aboutHero.png");
+    background: rgba(0, 0, 0, 0.3) url("../../assets/about-hero.png");
     background-size: cover;
     background-blend-mode: darken;
     position: relative;
