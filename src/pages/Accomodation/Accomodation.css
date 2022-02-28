@@ -1,9 +1,9 @@
-.logement-main {
+.accomodation-main {
     margin: 0 100px;
 }
 
-.logement-header,
-.logement-carrousel {
+.accomodation-header,
+.accomodation-carrousel {
     margin-bottom: 30px;
 }
 
@@ -15,7 +15,7 @@
     right: 23px;
 }
 
-.logement-info-container {
+.accomodation-info-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -23,37 +23,37 @@
     gap: 20px;
 }
 
-.logement-title {
+.accomodation-title {
     font-weight: 500;
     font-size: 36px;
     margin: 0;
 }
 
-.logement-host {
+.accomodation-host {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logement-host-name {
+.accomodation-host-name {
     width: 93px;
     margin: 0 10px 0 0;
     text-align: right;
 }
 
-.logement-host-portrait {
+.accomodation-host-portrait {
     border-radius: 50%;
     width: 64px;
     height: 64px;
 }
 
-.logement-details {
+.accomodation-details {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.logement-rating {
+.accomodation-rating {
     width: 200px;
 }
 
@@ -69,42 +69,42 @@
 }
 
 @media screen and (max-width: 991px) {
-    .logement-main {
+    .accomodation-main {
         margin: 0 50px 31px 50px;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .logement-main {
+    .accomodation-main {
         margin: 0 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .logement-info-container {
+    .accomodation-info-container {
         flex-direction: column;
     }
 
-    .logement-title {
+    .accomodation-title {
         font-size: 4.8vw;
     }
 
-    .logement-location {
+    .accomodation-location {
         font-size: 3.733vw;
     }
 
-    .logement-host-info-container {
+    .accomodation-host-info-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
     }
 
-    .logement-rating {
+    .accomodation-rating {
         order: 1;
     }
 
-    .logement-host {
+    .accomodation-host {
         order: 2;
         font-size: 3.2vw;
     }

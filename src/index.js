@@ -5,7 +5,7 @@ import './index.css';
 import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Logement from './pages/Logement/Logement';
+import Accomodation from './pages/Accomodation/Accomodation';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import reportWebVitals from './reportWebVitals';
 
@@ -16,7 +16,7 @@ ReactDOM.render(
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/logement/:id" element={<Logement />} />
+                    <Route path="/accomodation/:id" element={<Accomodation />} />
                     <Route path="*" element={<NotFoundPage />}/>
                 </Route>
             </Routes>
