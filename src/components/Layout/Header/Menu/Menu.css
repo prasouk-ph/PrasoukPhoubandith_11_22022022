@@ -1,19 +1,17 @@
-.Menu {
+.menu {
     display: flex;
     justify-content: space-between;
     height: 34px;
-    width: 309px;
-    left: 931px;
-    top: 17px;
+    width: 21.458vw;
 }
 
-.Menu a {
+.menu a {
     color: #ff6060;
-    font-size: 24px;
+    /* font-size: 1.667vw; */
     text-decoration: none;
     text-align: right;
 }
 
-.Menu a:hover {
+.menu a:hover {
     text-decoration: underline;
 }

@@ -3,7 +3,7 @@ import './Menu.css';
 
 function Menu() {
     return (
-        <nav className='Menu'>
+        <nav className='menu'>
             <Link to="/">Accueil</Link>
             <Link to="/About">A propos</Link>
         </nav>

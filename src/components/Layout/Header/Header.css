@@ -1,6 +1,32 @@
-.Header {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 40px 100px;
+}
+
+.menu a {
+    font-size: 1.667vw;
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        margin: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        width: 29.167vw;
+    }
+
+    .menu a {
+        font-size: 3.2vw;
+    }
 }

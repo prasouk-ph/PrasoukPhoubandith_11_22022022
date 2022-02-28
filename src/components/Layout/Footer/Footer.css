@@ -1,9 +1,9 @@
-.Footer {
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 100px;
+    padding: 40px;
     background-color: black;
     height: 209px;
     gap: 30px;

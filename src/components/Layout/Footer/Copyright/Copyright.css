@@ -1,3 +1,10 @@
-.Copyright {
+.copyright {
     color: white;
+    font-size: 1.667vw;
+}
+
+@media screen and (max-width: 375px) {
+    .copyright {
+        font-size: 3.2vw;
+    }
 }
