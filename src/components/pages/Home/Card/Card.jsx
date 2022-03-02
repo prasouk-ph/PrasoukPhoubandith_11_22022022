@@ -1,12 +1,15 @@
 import './Card.css';
 import accomodations from '../../../../data/logements.json'
+import { useNavigate } from "react-router-dom";
+
 
 function Card({ title, id }) {
+    let navigate = useNavigate();
     const cardData = accomodations.filter(accomodation => accomodation.id === id)[0]
     const cardCoverSource = cardData.cover
 
     function handleClick() {
-        window.location.href = `/accomodation/${id}`
+        navigate(`/accomodation/${id}`);
     }
 
     return (
