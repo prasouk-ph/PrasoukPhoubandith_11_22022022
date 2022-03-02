@@ -1,9 +1,0 @@
-.header-logo {
-    width: 14.583vw;
-}
-
-@media screen and (max-width: 375px) {
-    .header-logo {
-        font-size: 10.069vw;
-    }
-}

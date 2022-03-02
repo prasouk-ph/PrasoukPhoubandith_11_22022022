@@ -15,7 +15,7 @@ return (
                 ))}
         </section>
     </main>
-  );
+    );
 }
 
 export default Home;

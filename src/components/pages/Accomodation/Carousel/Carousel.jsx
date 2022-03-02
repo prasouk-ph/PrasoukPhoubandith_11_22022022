@@ -30,7 +30,7 @@ function Carousel({ pictures }) {
         {pictures.length > 1 && <img className='carousel-controls previous-button' src={leftArrow} alt="previous button" onClick={ handlePreviousClick } />}
         {pictures.length > 1 && <img className='carousel-controls next-button' src={rightArrow} alt="next button" onClick={ handleNextClick } />}
     </div>
-  );
+    );
 }
 
 export default Carousel;

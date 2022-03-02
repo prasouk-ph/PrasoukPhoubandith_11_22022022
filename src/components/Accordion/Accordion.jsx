@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-
-import './Accordion.css';
 import chevronUp from '../../assets/chevron-up.png';
 import chevronDown from '../../assets/chevron-down.png';
-
+import './Accordion.css';
 
 function Accordion({ accordionTitle, accordionContent, accordionType }) {
     const [isActive, setIsActive] = useState(false);
@@ -26,7 +24,7 @@ function Accordion({ accordionTitle, accordionContent, accordionType }) {
             </div>
         }
     </div>
-  );
+    );
 }
 
 export default Accordion;

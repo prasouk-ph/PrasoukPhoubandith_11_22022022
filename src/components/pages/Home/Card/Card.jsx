@@ -16,7 +16,7 @@ function Card({ title, id }) {
             <p className='card-title'>{title}</p>
         </div>
     </div>
-  );
+    );
 }
 
 export default Card;

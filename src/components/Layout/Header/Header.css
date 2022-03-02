@@ -5,8 +5,27 @@
     margin: 40px 100px;
 }
 
+.header-logo {
+    width: 14.583vw;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    width: 21.458vw;
+}
+
 .menu a {
+    color: #ff6060;
     font-size: 1.667vw;
+    text-decoration: none;
+    text-align: right;
+}
+
+.menu a:hover {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 991px) {
@@ -22,6 +41,10 @@
 }
 
 @media screen and (max-width: 480px) {
+    .header-logo {
+        font-size: 10.069vw;
+    }
+
     .menu {
         width: 29.167vw;
     }

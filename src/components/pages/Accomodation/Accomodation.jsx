@@ -68,7 +68,7 @@ function Accomodation() {
             <Accordion accordionTitle='Équipements' accordionContent={currentAccomodation.equipments} accordionType='information' />
         </section>
     </main>
-  );
+    );
 }
 
 export default Accomodation;

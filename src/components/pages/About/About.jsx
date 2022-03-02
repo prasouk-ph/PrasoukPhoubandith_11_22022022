@@ -19,7 +19,7 @@ function About() {
                 <Accordion accordionTitle='Fiabilité' accordionContent={resposabilityContent} accordionType='term'/>
         </section>
     </main>
-  );
+    );
 }
 
 export default About;
