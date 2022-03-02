@@ -1,22 +1,22 @@
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout/Layout';
+import Home from './components/pages/Home/Home';
+import About from './components/pages/About/About';
+import Accomodation from './components/pages/Accomodation/Accomodation';
+import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/accomodation/:id" element={<Accomodation />} />
+                <Route path="*" element={<NotFoundPage />}/>
+            </Route>
+        </Routes>
+    </Router>
   );
 }
 

@@ -5,7 +5,7 @@ function Menu() {
     return (
         <nav className='menu'>
             <Link to="/">Accueil</Link>
-            <Link to="/About">A propos</Link>
+            <Link to="/about">A propos</Link>
         </nav>
       );
 }

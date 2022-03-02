@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import leftArrow from '../../../assets/left-arrow.png';
-import rightArrow from '../../../assets/right-arrow.png';
+import leftArrow from '../../../../assets/left-arrow.png';
+import rightArrow from '../../../../assets/right-arrow.png';
 import './Carousel.css';
 
 
@@ -20,7 +20,7 @@ function Carousel({ pictures }) {
         if (index >= pictures.length - 1) {
             setIndex(0)
         } else {
-            setIndex(parseInt(index +1))
+            setIndex(parseInt(index + 1))
         }
     }
 

@@ -1,26 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css';
-import Layout from './components/Layout/Layout';
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Accomodation from './pages/Accomodation/Accomodation';
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Router>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/accomodation/:id" element={<Accomodation />} />
-                    <Route path="*" element={<NotFoundPage />}/>
-                </Route>
-            </Routes>
-        </Router>
+        <App />
     </React.StrictMode>,
     document.getElementById('root')
 )
