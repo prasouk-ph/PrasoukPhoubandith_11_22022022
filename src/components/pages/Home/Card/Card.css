@@ -39,3 +39,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.card:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+    box-shadow: 1px 8px 20px grey;
+}
