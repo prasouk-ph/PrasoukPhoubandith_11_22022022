@@ -6,6 +6,7 @@ function Header() {
     return (
         <div className='header'>
             <img className='header-logo' src={logo} alt="logo" />
+            
             <nav className='menu'>
                 <Link to="/">Accueil</Link>
                 <Link to="/about">A propos</Link>
