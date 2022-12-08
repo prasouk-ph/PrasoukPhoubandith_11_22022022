@@ -3,7 +3,13 @@ import chevronUp from '../../assets/chevron-up.png';
 import chevronDown from '../../assets/chevron-down.png';
 import './Accordion.css';
 
-function Accordion({ accordionTitle: string, accordionContent, accordionType }) {
+interface AccordionProps {
+  accordionTitle: string;
+  accordionContent: string | string[];
+  accordionType: string 
+}
+
+function Accordion({ accordionTitle, accordionContent, accordionType }: AccordionProps): JSX.Element {
     const [isActive, setIsActive] = useState(false);
 
     return (
