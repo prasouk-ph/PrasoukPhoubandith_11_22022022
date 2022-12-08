@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Accomodation.css';
 import Accordion from '../../Accordion/Accordion';
 import Tag from './Tag/Tag';
@@ -10,6 +10,14 @@ import { useParams, useNavigate } from "react-router-dom";
 
 function Accomodation(): JSX.Element {
     let navigate = useNavigate();
+        
+    useEffect(() => {
+      if (currentAccomodation === undefined) {
+        console.log("ID inexistant !");
+        navigate("/notfound");
+      }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const { id } = useParams(); // current page ID
     
@@ -30,12 +38,9 @@ function Accomodation(): JSX.Element {
     }
   
     const currentAccomodation: Accomodation | undefined = accomodations.filter(accomodation => accomodation.id === id)[0]
-    if (currentAccomodation === undefined) {
-        console.log("ID inexistant !");
-        navigate("/notfound");
-    }
     
-    const redStarCount: number = parseInt(currentAccomodation.rating)
+    
+    const redStarCount: number = parseInt(currentAccomodation?.rating)
     const redStars: JSX.Element[] = []
     for (let count = 0; count < redStarCount; count++) {
         redStars.push(<img key={count} className='star' src={bigRedStar} alt="red star icon" />)
@@ -51,18 +56,18 @@ function Accomodation(): JSX.Element {
     <main className="accomodation-main">
         <section className="accomodation-header">
             <div className="accomodation-carrousel">
-                <Carousel pictures={currentAccomodation.pictures} />
+                <Carousel pictures={currentAccomodation?.pictures} />
             </div>
             
             <div className="accomodation-info-container">
                 <div className="accomodation-details-container">
                     <div className="accomodation-info">
-                        <h1 className='accomodation-title'>{currentAccomodation.title}</h1>
-                        <p className='accomodation-location'>{currentAccomodation.location}</p>
+                        <h1 className='accomodation-title'>{currentAccomodation?.title}</h1>
+                        <p className='accomodation-location'>{currentAccomodation?.location}</p>
                     </div>
                     
                     <div className="tag-container">
-                        {currentAccomodation.tags.map(tag => (
+                        {currentAccomodation?.tags.map(tag => (
                             <Tag key={tag} name={tag} />
                         ))}
                     </div>
@@ -70,8 +75,8 @@ function Accomodation(): JSX.Element {
                 
                 <div className="accomodation-host-info-container">
                     <div className="accomodation-host">
-                        <p className='accomodation-host-name'>{currentAccomodation.host.name}</p>
-                        <img className='accomodation-host-portrait' src={currentAccomodation.host.picture} alt="portrait" />
+                        <p className='accomodation-host-name'>{currentAccomodation?.host.name}</p>
+                        <img className='accomodation-host-portrait' src={currentAccomodation?.host.picture} alt="portrait" />
                     </div>
 
                     <div className="accomodation-rating">
@@ -83,8 +88,8 @@ function Accomodation(): JSX.Element {
         </section>
         
         <section className="accomodation-details">
-            <Accordion accordionTitle='Description' accordionContent={currentAccomodation.description} accordionType='information' />
-            <Accordion accordionTitle='Équipements' accordionContent={currentAccomodation.equipments} accordionType='information' />
+            <Accordion accordionTitle='Description' accordionContent={currentAccomodation?.description} accordionType='information' />
+            <Accordion accordionTitle='Équipements' accordionContent={currentAccomodation?.equipments} accordionType='information' />
         </section>
     </main>
     );
