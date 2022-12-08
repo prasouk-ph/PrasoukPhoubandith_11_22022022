@@ -6,10 +6,11 @@ import bigRedStar from '../../../assets/big-red-star.png';
 import bigGreyStar from '../../../assets/big-grey-star.png';
 import accomodations from '../../../data/logements.json'
 import Carousel from './Carousel/Carousel'
-import { useParams } from "react-router-dom";
-import NotFoundPage from '../NotFoundPage/NotFoundPage';
+import { useParams, useNavigate } from "react-router-dom";
 
 function Accomodation(): JSX.Element {
+    let navigate = useNavigate();
+
     const { id } = useParams(); // current page ID
     
     interface Accomodation {
@@ -31,7 +32,7 @@ function Accomodation(): JSX.Element {
     const currentAccomodation: Accomodation | undefined = accomodations.filter(accomodation => accomodation.id === id)[0]
     if (currentAccomodation === undefined) {
         console.log("ID inexistant !");
-        return <NotFoundPage />
+        navigate("/notfound");
     }
     
     const redStarCount: number = parseInt(currentAccomodation.rating)
