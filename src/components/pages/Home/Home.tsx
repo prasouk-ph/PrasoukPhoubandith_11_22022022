@@ -1,3 +1,4 @@
+import React from 'react';
 import './Home.css';
 import Card from './Card/Card';
 import accomodations from '../../../data/logements.json'

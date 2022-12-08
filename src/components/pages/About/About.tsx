@@ -1,3 +1,4 @@
+import React from 'react';
 import './About.css';
 import Accordion from '../../Accordion/Accordion';
 

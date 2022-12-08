@@ -3,7 +3,7 @@ import chevronUp from '../../assets/chevron-up.png';
 import chevronDown from '../../assets/chevron-down.png';
 import './Accordion.css';
 
-function Accordion({ accordionTitle, accordionContent, accordionType }) {
+function Accordion({ accordionTitle: string, accordionContent, accordionType }) {
     const [isActive, setIsActive] = useState(false);
 
     return (

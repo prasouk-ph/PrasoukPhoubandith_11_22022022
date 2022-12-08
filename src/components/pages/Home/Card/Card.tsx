@@ -1,3 +1,4 @@
+import React from 'react';
 import './Card.css';
 import accomodations from '../../../../data/logements.json'
 import { useNavigate } from "react-router-dom";

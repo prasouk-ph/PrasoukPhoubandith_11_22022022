@@ -1,3 +1,4 @@
+import React from 'react';
 import './Accomodation.css';
 import Accordion from '../../Accordion/Accordion';
 import Tag from './Tag/Tag';
