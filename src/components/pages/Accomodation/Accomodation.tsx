@@ -9,22 +9,39 @@ import Carousel from './Carousel/Carousel'
 import { useParams } from "react-router-dom";
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
-function Accomodation() {
+function Accomodation(): JSX.Element {
     const { id } = useParams(); // current page ID
-    const currentAccomodation = accomodations.filter(accomodation => accomodation.id === id)[0]
+    
+    interface Accomodation {
+      id: string;
+      title: string;
+      cover: string;
+      pictures: string[];
+      description: string;
+      host: {
+        name: string;
+        picture: string
+      };
+      rating: string;
+      location: string;
+      equipments: string[];
+      tags: string[]
+    }
+  
+    const currentAccomodation: Accomodation | undefined = accomodations.filter(accomodation => accomodation.id === id)[0]
     if (currentAccomodation === undefined) {
         console.log("ID inexistant !");
         return <NotFoundPage />
     }
     
-    const redStarCount = currentAccomodation.rating
-    const redStars = []
+    const redStarCount: number = parseInt(currentAccomodation.rating)
+    const redStars: JSX.Element[] = []
     for (let count = 0; count < redStarCount; count++) {
         redStars.push(<img key={count} className='star' src={bigRedStar} alt="red star icon" />)
     }
 
-    const greyStarCount = 5 - redStarCount
-    const greyStars = []
+    const greyStarCount: number = 5 - redStarCount
+    const greyStars: JSX.Element[] = []
     for (let count = 0; count < greyStarCount; count++) {
         greyStars.push(<img key={count} className='star' src={bigGreyStar} alt="grey star icon" />)
     }
