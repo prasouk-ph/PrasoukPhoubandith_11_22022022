@@ -4,7 +4,7 @@ import accomodations from '../../../../data/logements.json'
 import { useNavigate } from "react-router-dom";
 
 
-function Card({ title, id }) {
+function Card({ title, id }: {title: string, id: string}): JSX.Element {
     let navigate = useNavigate();
     const cardData = accomodations.filter(accomodation => accomodation.id === id)[0]
     const cardCoverSource = cardData.cover

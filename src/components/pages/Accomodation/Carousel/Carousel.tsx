@@ -4,7 +4,7 @@ import rightArrow from '../../../../assets/right-arrow.png';
 import './Carousel.css';
 
 
-function Carousel({ pictures }) {
+function Carousel({ pictures }: {pictures: string[]}): JSX.Element {
     const [index, setIndex] = useState([0])
     let imageSourceToDisplay = pictures[index]
 
